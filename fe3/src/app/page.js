@@ -1,7 +1,5 @@
+import Image from "next/image";
+
 export default function Home() {
-  return (
-    <main>
-      <h1>fe - 3</h1>
-    </main>
-  );
+  return <main>fe - 3</main>;
 }
