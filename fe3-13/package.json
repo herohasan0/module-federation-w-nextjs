@@ -1,9 +1,9 @@
 {
-  "name": "fe1",
+  "name": "fe3",
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "PORT=4000 next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"

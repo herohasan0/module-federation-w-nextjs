@@ -1,11 +1,11 @@
 {
-  "name": "fe3",
+  "name": "fe1",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
+    "start": "PORT=3000 next start",
     "lint": "next lint"
   },
   "dependencies": {
