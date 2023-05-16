@@ -1,3 +1,11 @@
+import Header from "../remoteEntry";
+
 export default function Home() {
-  return <div>fe - 3</div>;
+  console.log("Header", Header);
+  return (
+    <div>
+      <Header />
+      <h1>Home</h1>
+    </div>
+  );
 }
