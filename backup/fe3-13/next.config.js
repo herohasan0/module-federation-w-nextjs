@@ -1,27 +1,20 @@
 /** @type {import('next').NextConfig} */
-const path = require("path");
-const { ModuleFederationPlugin } = require("webpack").container;
+const { NextFederationPlugin } = require("@module-federation/nextjs-mf");
 
 const nextConfig = {
-  reactStrictMode: true,
-  webpack5: true,
   webpack: (config, options) => {
-    config.experiments = { ...config.experiments, topLevelAwait: true };
-    config.plugins.push(
-      new ModuleFederationPlugin({
-        name: "fe3",
-        filename: "static/consumerFile.js",
-        remoteType: "var",
-        remotes: {
-          // "fe1/header": "fe1/header@http://localhost:3000/remoteEntry.js",
-          // hasan: options.isServer
-          //   ? path.resolve("../fe2/remotedemo.js")
-          //   : "fe2",
-          fe1: options.isServer ? path.resolve("../fe1/remoteEntry.js") : "fe1",
-          fe2: options.isServer ? path.resolve("/remoteEntry_2.js") : "fe2",
-        },
-      })
-    );
+    if (!options.isServer) {
+      config.plugins.push(
+        new NextFederationPlugin({
+          name: "fe3_13",
+          filename: "static/chunks/remoteEntry.js",
+          remotes: {
+            hero_components:
+              "hero_components@http://localhost:4001/_next/static/chunks/remoteEntry.js",
+          },
+        })
+      );
+    }
     return config;
   },
 };
