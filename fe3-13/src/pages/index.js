@@ -8,5 +8,10 @@ const RemoteKahramanTitle = dynamic(
 );
 
 export default function Home() {
-  return <RemoteKahramanTitle />;
+  return (
+    <RemoteKahramanTitle
+      className="text-3xl text-blue-700"
+      title="Remote Title Example"
+    />
+  );
 }

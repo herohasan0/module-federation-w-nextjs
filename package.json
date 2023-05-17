@@ -1,0 +1,9 @@
+{
+  "workspaces": [
+    "./fe2-13",
+    "./fe3-13"
+  ],
+  "scripts": {
+    "dev": "npm --prefix fe2-13 run dev & npm --prefix fe3-13 run dev"
+  }
+}
