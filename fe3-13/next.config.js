@@ -12,7 +12,7 @@ const nextConfig = {
             hero_components:
               "hero_components@http://localhost:4001/_next/static/chunks/remoteEntry.js",
             ui_library:
-              "ui_library@http://localhost:6006/dist/static/chunks/remoteEntry.js",
+              "ui_library@http://localhost:6006/_next/static/chunks/remoteEntry.js",
           },
         })
       );

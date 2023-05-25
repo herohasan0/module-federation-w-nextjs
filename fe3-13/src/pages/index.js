@@ -7,6 +7,13 @@ const RemoteKahramanTitle = dynamic(
   { ssr: false }
 );
 
+const RemoteTitle = dynamic(
+  () => {
+    return import("ui_library/Title");
+  },
+  { ssr: false }
+);
+
 const RemoteButton = dynamic(
   () => {
     return import("ui_library/Button");
@@ -21,7 +28,13 @@ export default function Home() {
         className="text-3xl text-blue-700"
         title="Remote Title Example"
       />
-      <RemoteButton />
+      <RemoteTitle title="Denemexx" />
+      <RemoteButton
+        text="deneme-btn"
+        isSolid
+        className="text-red-200 border"
+        isLoading
+      />
     </div>
   );
 }
